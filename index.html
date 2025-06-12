@@ -4,103 +4,141 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Internet Archive Redux</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #0e0e0e;
-      color: #f4f4f4;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      color: #f2f2f2;
       padding: 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
     h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
+      font-size: 3rem;
+      font-weight: 900;
       margin-bottom: 0.5rem;
+      color: #ffffff;
     }
     p.tagline {
-      font-size: 1.2rem;
-      color: #999;
+      font-size: 1.25rem;
+      color: #bdbdbd;
       margin-bottom: 2rem;
     }
     .search-box {
       display: flex;
+      max-width: 600px;
       margin-bottom: 3rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
     }
     .search-box input {
       flex: 1;
-      padding: 0.8rem 1rem;
+      padding: 1rem 1.25rem;
       font-size: 1rem;
       border: none;
-      border-radius: 0.5rem 0 0 0.5rem;
       outline: none;
+      background: #141414;
+      color: #fff;
+    }
+    .search-box input::placeholder {
+      color: #777;
     }
     .search-box button {
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 0 0.5rem 0.5rem 0;
-      background-color: #1f1f1f;
+      padding: 1rem 1.5rem;
+      background-color: #292929;
       color: #fff;
+      font-weight: bold;
+      border: none;
       cursor: pointer;
+      transition: background 0.2s;
+    }
+    .search-box button:hover {
+      background-color: #444;
     }
     .archive-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      flex: 1;
     }
     .item {
-      background-color: #1a1a1a;
-      padding: 1rem;
-      border-radius: 0.75rem;
+      background: #171717;
+      border: 1px solid #222;
+      border-radius: 1rem;
+      padding: 1.5rem;
       text-align: center;
+      transition: all 0.2s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+    .item:hover {
+      transform: translateY(-5px);
+      background-color: #202020;
+      border-color: #333;
     }
     .item h3 {
-      font-size: 1rem;
-      margin: 0.5rem 0 0.25rem;
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+      color: #ffffff;
     }
     .item p {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: #aaa;
     }
     footer {
-      margin-top: 3rem;
+      margin-top: 4rem;
       text-align: center;
-      font-size: 0.9rem;
-      color: #555;
+      font-size: 0.85rem;
+      color: #666;
+      padding: 1rem 0;
+      border-top: 1px solid #1a1a1a;
     }
   </style>
 </head>
 <body>
   <h1>Internet Archive Redux</h1>
-  <p class="tagline">Based on the site you know and love — now reimagined for the future.</p>
+  <p class="tagline">Based on the site you know and love — reimagined for a new generation of preservationists.</p>
 
   <div class="search-box">
-    <input type="text" placeholder="Search archived websites, files, and more..." />
+    <input type="text" placeholder="Search old websites, media, timelines, and more..." />
     <button>Search</button>
   </div>
 
   <div class="archive-grid">
     <div class="item">
       <h3>Classic Web</h3>
-      <p>Snapshots of old websites</p>
+      <p>Relive snapshots of long-gone websites from the early web.</p>
     </div>
     <div class="item">
       <h3>Old Media</h3>
-      <p>Archived videos, music, and games</p>
+      <p>Archive of forgotten videos, soundtracks, ROMs, and more.</p>
     </div>
     <div class="item">
-      <h3>Books & PDFs</h3>
-      <p>Scans of rare and public works</p>
+      <h3>Books & Docs</h3>
+      <p>PDFs, scanned books, and rare texts from the web's memory.</p>
     </div>
     <div class="item">
       <h3>Snapshots</h3>
-      <p>Timeline-based captures</p>
+      <p>Timeline captures of web pages before they disappeared.</p>
+    </div>
+    <div class="item">
+      <h3>File Vault</h3>
+      <p>Raw downloadable files rescued from the digital abyss.</p>
+    </div>
+    <div class="item">
+      <h3>Wayback+ Tools</h3>
+      <p>Upload URLs, capture pages, and explore enhanced history.</p>
     </div>
   </div>
 
   <footer>
-    &copy; 2025 Internet Archive Redux. Built by Paragon. Not affiliated with archive.org.
+    &copy; 2025 Internet Archive Redux. Built by Paragon. Not affiliated with archive.org. Powered by nostalgia and new tech.
   </footer>
 </body>
 </html>
